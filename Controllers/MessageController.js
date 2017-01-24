@@ -1,18 +1,14 @@
 class MessageController {
-    
-    hello(){
-        return { hello: 'world' };
-    }
 
-    goodbye(){
+    hello(){
         function getWorld(){
             return 'Mars';
         }
         var world = getWorld();
-        return { goodbye : world}
+        return { hello : world}
     }
     
-    response(data){
+    whatsThis(data){
         console.log(data);
     }
     
