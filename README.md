@@ -5,7 +5,7 @@ messages separated in routes, models, controllers and middleware.
 ##Router Concept
 This should be the implementation goal of the routes file.
 
-```
+```javascript
 const Route = use('Route')  
     
 Route.send('message', 'MessageController.methodOne');
@@ -19,7 +19,7 @@ Route.webhook('message', 'MessageController.methodThree');
 
 ##Concept Controller
 
-```
+```javascript
 const Message = use('App/Model/Message')
     
 class MessageController {
@@ -60,7 +60,7 @@ Download this repository and
 ##Routing
 Add your messages in the `routes.js` function.
 
-```
+```javascript
 var routes = function(socket){
     
     socket.emit('news', MessageController.hello());
@@ -74,7 +74,7 @@ var routes = function(socket){
 ##Controllers
 Add your message logic on the controller.
 
-```
+```javascript
 class MessageController {
     
     hello(){
