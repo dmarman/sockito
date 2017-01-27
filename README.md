@@ -1,5 +1,56 @@
-# Sockito
-Sockito is a real-time framework based on Socket.io and Express. 
+# Sockito Concept
+Sockito is a real-time framework based on Socket.io and Express. The goal is to keep all the logic of the 
+messages separated in routes, models, controllers and middleware.
+
+##Router Concept
+This should be the implementation goal of the routes file.
+
+```
+const Route = use('Route')  
+    
+Route.send('message', 'MessageController.methodOne');
+        
+Route.recieve('message', 'MessageController.methodTwo').middleware('authentication');
+    
+//Recieve message from a webhook instead of a websocket
+Route.webhook('message', 'MessageController.methodThree');
+
+```
+
+##Concept Controller
+
+```
+const Message = use('App/Model/Message')
+    
+class MessageController {
+    
+    methodOne(){
+        
+        const message = yield Message.find(1)
+        
+        return { content : message.content}
+    }
+    
+    methodTwo(data){
+            
+        const message = new Message;
+            
+        message = data;
+            
+        message.save();
+            
+    }
+    
+    methodThree(){
+    
+        Route.send('message', this.methodOne());
+    
+    }
+
+}
+```
+
+#What we have now
 
 ##Installation
 Download this repository and 
