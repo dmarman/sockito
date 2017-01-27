@@ -10,7 +10,7 @@ const Route = use('Route')
     
 Route.send('message', 'MessageController.methodOne');
         
-Route.recieve('message', 'MessageController.methodTwo').middleware('authentication');
+Route.receive('message', 'MessageController.methodTwo').middleware('authentication');
     
 //Recieve message from a webhook instead of a websocket
 Route.webhook('message', 'MessageController.methodThree');
