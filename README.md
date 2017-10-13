@@ -2,7 +2,7 @@
 Sockito is a real-time framework based on Socket.io and Express. The goal is to keep all the logic of the 
 messages separated in routes, models, controllers and middleware.
 
-##Installation
+#Installation
 
 Download this repository and
 
