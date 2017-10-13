@@ -33,7 +33,10 @@ router.on('message/update', () => {
 ```
 
 ## Controllers
-Add your message logic on the controller.
+Add your message logic on the controller. You can access the incoming data sent by the client in `req.input`.
+ Send a response to the socket using `res.emit()`.
+
+
 
 ```javascript
 class MessageController {
