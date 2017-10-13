@@ -2,8 +2,8 @@ class Router
 {
     constructor(io){
         this.routes = [];
-        
-        io.on(('connection'), (socket) => {
+        this.io = io;
+        io.on('connection', (socket) => {
             this.attachRoutes(socket);
         });
     }

@@ -13,11 +13,8 @@ app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html');
 });
 
-
-
 router.on('message/create', MessageController.create);
 router.on('message/destroy', MessageController.destroy);
 router.on('message/update', () => {
     console.log('cannot update message');
 });
-
