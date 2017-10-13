@@ -1,15 +1,16 @@
 class MessageController {
 
-    hello(){
-        function getWorld(){
-            return 'Mars';
-        }
-        var world = getWorld();
-        return { hello : world}
+    create(req, res)
+    {
+        console.log('message created: ');
+        console.log(req.input);
+        res.emit('news', { hello: 'world' });
     }
     
-    whatsThis(data){
-        console.log(data);
+    destroy(req)
+    {
+        console.log('message was destroyed');
+        console.log(req.input);
     }
     
 }

@@ -1,0 +1,14 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost');
+    socket.on('news', function (data) {
+        console.log(data);
+    });
+    setInterval(function(){
+        socket.emit('message/create', { data: 'message saved'});
+        socket.emit('message/destroy', { data: 'message destroyed'});
+        socket.emit('message/update', { data: 'updated payload'});
+
+    }, 2000);
+
+</script>
