@@ -61,7 +61,7 @@ module.exports = new MessageController();
 
 ## Client Example
 
-```
+```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
 <script>
     var socket = io.connect('http://localhost');
