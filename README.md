@@ -2,13 +2,13 @@
 Sockito is a real-time framework based on Socket.io and Express. The goal is to keep all the logic of the 
 messages separated in routes, models, controllers and middleware.
 
-##Installation
+## Installation
 
 Download this repository and
 
 `node app.js`
 
-##App.js
+## App.js
 
 ```javascript
 var app = require('express')();
@@ -32,7 +32,7 @@ router.on('message/update', () => {
 });
 ```
 
-##Controllers
+## Controllers
 Add your message logic on the controller.
 
 ```javascript
@@ -56,7 +56,7 @@ class MessageController {
 module.exports = new MessageController();
 ```
 
-##Client Example
+## Client Example
 
 ```
 <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
