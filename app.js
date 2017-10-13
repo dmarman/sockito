@@ -1,13 +1,12 @@
 var app = require('express')();
 var server = require('http').Server(app);
+server.listen(80);
+
 var io = require('socket.io')(server);
 var Router = require('./router.js');
-router = new Router(io);
 
+var router = new Router(io);
 var MessageController = require('./Controllers/MessageController');
-
-
-server.listen(80);
 
 app.get('/', function (req, res) {
     res.sendfile(__dirname + '/index.html');

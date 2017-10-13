@@ -4,11 +4,8 @@
     socket.on('news', function (data) {
         console.log(data);
     });
-    setInterval(function(){
-        socket.emit('message/create', { data: 'message saved'});
-        socket.emit('message/destroy', { data: 'message destroyed'});
-        socket.emit('message/update', { data: 'updated payload'});
 
-    }, 2000);
-
+    socket.emit('message/create', { data: 'message saved'});
+    socket.emit('message/destroy', { data: 'message destroyed'});
+    socket.emit('message/update', { data: 'updated payload'});
 </script>

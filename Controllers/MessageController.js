@@ -7,7 +7,7 @@ class MessageController {
         res.emit('news', { hello: 'world' });
     }
     
-    destroy(req)
+    destroy(req, res)
     {
         console.log('message was destroyed');
         console.log(req.input);
